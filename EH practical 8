@@ -1,0 +1,12 @@
+P8 PRINCIPAL COMPONENT ANALYSIS
+data("iris")
+data_iris <- iris[, 1:4]
+PCA_data <- princomp(data_iris, cor = FALSE)
+PCA_data$loadings[, 1:4]
+summary(PCA_data)
+biplot(PCA_data)
+screeplot(PCA_data, type = "lines")
+data(iris)
+data_iris <- iris[, 1:4]
+PCA_data <- princomp(data_iris, cor = FALSE)
+biplot(PCA_data)
