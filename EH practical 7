@@ -1,0 +1,60 @@
+P7 TIME SERIES FORECASTING
+library(hflights)
+library(data.table)
+dt <- data.table(hflights)
+dt[, date := ISOdate(Year, Month, DayofMonth)]
+daily <- dt[, list(
+N = .N,
+Delays = sum(ArrDelay, na.rm = TRUE),
+Cancelled = sum(Cancelled),
+Distance = mean(Distance)
+), by = date]
+str(daily)
+THEN INSTALL HFLIGHTS
+THEN INSTALL DATA.TABLE
+THEN EDIT AFTER THE OUTPUT
+ADD
+nts <-ts(daily$N,frequency = 7)
+plot(nts)
+INSTALL FORECAST
+THEN ADD THOIS LINE IN THE OUTPUT
+library(forecast)
+auto.arima(nts)
+AFTER THIS ADD ANOTHER LINE IN THE OUTPUT
+auto.arima(nts,approximaƟon = FALSE)
+AFTER THIS ADD ANOTHER LINE IN THE OUTPUT
+fit <- HoltWinters(nts)
+plot(fit)
+AFTER THIS ADD ANOTHER LINE IN THE OUTPUT
+library(forecast)
+forecast(fit)
+AFTER THIS ADD ANOTHER LINE IN THE OUTPUT
+f <- forecast(HoltWinters(nts), 5)
+f
+AFTER THIS ADD ANOTHER LINE IN THE OUTPUT
+library(forecast)
+nts <- ts(daily$N, frequency = 7)
+fit <- HoltWinters(nts)
+f <- forecast(fit, 5)
+plot(f)
+cts <- ts(daily$Cancelled)
+fit <- auto.arima(cts)
+auto.arima(cts)
+then install package tsoutliers
+AFTER THIS ADD ANOTHER LINE IN THE OUTPUT
+library(tsoutliers)
+outliers <- tso(
+cts,
+tsmethod = "arima",
+args.tsmethod = list(order = c(1, 1, 2))
+)
+outliers
+AFTER THIS ADD ANOTHER LINE IN THE OUTPUT
+library(tsoutliers)
+cts <- ts(daily$Cancelled)
+outliers <- tso
+( cts, tsmethod = "arima",
+args.tsmethod = list(order = c(1, 1, 2))
+)
+plot(outliers)
+plot(tso(ts(daily$Cancelled)))
