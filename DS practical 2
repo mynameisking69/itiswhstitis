@@ -1,0 +1,35 @@
+C1- APPLE
+apple <- read.csv(file.choose(),sep=",",header=TRUE)
+summary(apple)
+t.test(apple$C1,
+alternaƟve="less"
+,mu=97)
+C2- MALE AND FEMALE
+Salary<-read.csv(file.choose(),sep=",",header=TRUE)
+summary (Salary)
+t.test(Salary$MALES,Salary $FEMALES,
+alternaƟve ="two.side",var.equal=TRUE)
+C3- POVERTY LEVEL
+poverty<-read.csv(file.choose(),sep=",",header=TRUE)
+t.test(poverty$X1,poverty$X2,
+alternaƟve="greater",paired=T)
+C4- MIS REPORT
+Ɵme1 <- read.csv(file.choose(), sep=",", header=TRUE)
+Ɵmel <- Ɵme1
+t.test(Ɵmel$Ɵme_before,
+Ɵmel$Ɵme_aŌer,
+alternaƟve="less",
+paired=TRUE)
+C5- COORELATION TEST
+cor<-read.csv(file.choose(), sep=",",header=TRUE)
+summary(cor)
+cor.test(cor$apƟtude,
+cor$job_prof,
+alternaƟve="two.sided",
+method="pearson")
+C6- VARIANCES TEST
+var <- read.csv(file.choose(), sep=",", header=TRUE)
+summary(var)
+var.test(var$Ɵme_g1,
+var$Ɵme_g2,
+alternaƟve="two.sided")
